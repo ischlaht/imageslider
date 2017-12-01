@@ -24,6 +24,17 @@
   </script>
 
 <style>
+.main-slider-container{
+    width: 850px;
+    height:400px;
+    background-color: blue;
+    margin:auto;
+    
+    position: relative;
+
+
+}
+
  .slider-holder
         {
             width: 800px;
@@ -31,9 +42,11 @@
             background-color: yellow;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 0px;
+            margin-top: 50px;
             text-align: center;
             overflow: hidden;
+            position: relative;
+            
         }
         
         .image-holder
@@ -52,10 +65,17 @@
         
         .slider-image
         {
+            border: 5px solid black;
+            border-top:10px solid black;
+            border-bottom: 30px solid black;
+            margin-left:20px;
+            width:800px;
+            height:400px;
             float: left;
             margin: 0px;
             padding: 0px;
             position: relative;
+            overflow: scroll;
         }
         
         #slider-image-1:target ~ .image-holder
@@ -72,11 +92,19 @@
         {
             left: -1600px;
         }
+        .arrow_button_left:target ~ .image-holder
+        {
+            left: 800px;
+        }
         
         .button-holder
         {
+            
             position: relative;
-            top: -20px;
+            top: -25px;
+            color:black;
+            margin:auto;
+            margin-bottom: 10px;
         }
         
         .slider-change
@@ -86,6 +114,39 @@
             width: 10px;
             border-radius: 5px;
             background-color: brown;
+        
+        }
+
+        .arrow_button_left{
+            float:left;
+            margin-top:160px;
+            
+            font-size: 50px;
+            display:inline-table;
+            position: relative;
+            color:red;
+
+        }
+        .arrow_button_left:hover{
+            color:green;
+            cursor: pointer;
+
+        }
+
+        .arrow_button_right{
+            float:right;
+            margin-top:160px;
+            
+            font-size: 50px;
+            display:inline-grid;
+            position: relative;
+            color:red;
+
+        }
+        .arrow_button_right:hover{
+            color:green;
+            cursor: pointer;
+
         }
 
 </style>
@@ -94,15 +155,24 @@
                 <title>QNimate Slider</title>
                 <link href="style.css" type="text/css" rel="stylesheet">
             </head>
+
+            
             <body>
+            <div class="main-slider-container">
+                <div class="arrow_button_left">
+                    <a href="#slider-image">&#x2770</a>
+                </div>
+                <div class="arrow_button_right">
+                        <a href="#slider-image">&#x2771</a>
+                    </div>
                 <div class="slider-holder">
                     <span id="slider-image-1"></span>
                     <span id="slider-image-2"></span>
                     <span id="slider-image-3"></span>
                     <div class="image-holder">
                         <img src="Images/photo1.jpg" class="slider-image" />
-                        <img src="2.jpg" class="slider-image" />
-                        <img src="3.jpg" class="slider-image" />
+                        <img src="Images/photo2.jpg" class="slider-image" />
+                        <img src="Images/photo3.jpg" class="slider-image" />
                     </div>
                     <div class="button-holder">
                         <a href="#slider-image-1" class="slider-change"></a>
@@ -110,8 +180,9 @@
                         <a href="#slider-image-3" class="slider-change"></a>
                     </div>
                 </div>
-            </body>
-
+            </div>
+        </body>
+            
 
 
 
