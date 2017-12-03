@@ -5,7 +5,7 @@
     margin: 0 auto;
     position: relative;
     margin-top: 50px;
-    border:20px solid transparent;
+    border:1px solid transparent;
     
     border-image: linear-gradient(to bottom, black 0%, grey 100%);
     border-image-slice: 1;
